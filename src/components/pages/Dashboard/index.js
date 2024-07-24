@@ -1,52 +1,61 @@
+import { Paper } from "@mui/material";
 import React from "react";
-import ReactApexChart from "react-apexcharts";
-import { Box, Typography, Container } from "@mui/material";
+import Chart from "react-apexcharts";
 
-const LineChart = () => {
-  const chartOptions = {
-    chart: {
-      id: "basic-line-chart",
-    },
-    xaxis: {
-      categories: [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec",
-      ],
+const IncomeExpensesChart = () => {
+  const data = {
+    series: [
+      {
+        name: "Income",
+        data: [5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000], // Example data for income
+      },
+      {
+        name: "Expenses",
+        data: [3000, 4000, 3500, 5000, 4500, 6000, 5500, 7000], // Example data for expenses
+      },
+    ],
+    options: {
+      chart: {
+        type: "line",
+        height: 350,
+      },
+      title: {
+        text: "Income vs. Expenses",
+        align: "left",
+      },
+      xaxis: {
+        categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"], // Example categories (months)
+      },
+      yaxis: {
+        title: {
+          text: "Amount",
+        },
+      },
+      stroke: {
+        curve: "smooth",
+      },
+      tooltip: {
+        shared: true,
+        intersect: false,
+      },
+      legend: {
+        position: "top",
+      },
     },
   };
 
-  const chartSeries = [
-    {
-      name: "Series 1",
-      data: [30, 40, 45, 50, 49, 60, 70, 91, 125, 145, 160, 170],
-    },
-  ];
-
   return (
-    <Container>
-      <Box mt={5}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Line Chart
-        </Typography>
-        <ReactApexChart
-          options={chartOptions}
-          series={chartSeries}
+    <div id="chart">
+      <Paper sx={{ p: 3 }}>
+        <Chart
+          options={data.options}
+          series={data.series}
           type="line"
           height={350}
         />
-      </Box>
-    </Container>
+      </Paper>
+    </div>
   );
 };
 
-export default LineChart;
+export default IncomeExpensesChart;
