@@ -3,7 +3,7 @@ import ReactApexChart from "react-apexcharts";
 import { Box, Typography, Container } from "@mui/material";
 
 const LineChart = () => {
-  const [chartOptions, setChartOptions] = useState({
+  const chartOptions = {
     chart: {
       id: "basic-line-chart",
     },
@@ -23,14 +23,14 @@ const LineChart = () => {
         "Dec",
       ],
     },
-  });
+  };
 
-  const [chartSeries, setChartSeries] = useState([
+  const chartSeries = [
     {
       name: "Series 1",
       data: [30, 40, 45, 50, 49, 60, 70, 91, 125, 145, 160, 170],
     },
-  ]);
+  ];
 
   return (
     <Container>
