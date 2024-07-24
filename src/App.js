@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter } from "react-router-dom";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "./components/pages/Login";
 import Expenses from "./components/pages/Expenses";
 import ProtectedRoute from "./ProtectedRoute";
@@ -38,6 +38,7 @@ function App() {
 
         <BrowserRouter>
           <Routes>
+            <Route path="/" exact element={<Navigate to={"/expenses"} />} />
             <Route path="/login" element={<Login />} />
             <Route element={<ProtectedRoute />} />
             <Route

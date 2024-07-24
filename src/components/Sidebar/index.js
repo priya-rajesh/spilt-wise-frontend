@@ -33,7 +33,7 @@ const Sidebar = ({ open }) => {
         <ListItemButton
           LinkComponent={NavLink}
           to="/dashboard"
-          activeClassName="active"
+          activeclassname="active"
         >
           <ListItemIcon>
             <HomeIcon />
@@ -43,7 +43,7 @@ const Sidebar = ({ open }) => {
         <ListItemButton
           LinkComponent={NavLink}
           to="/expenses"
-          activeClassName="active"
+          activeclassname="active"
         >
           <ListItemIcon>
             <InfoIcon />
