@@ -4,7 +4,9 @@ import { AuthContext } from "./AuthContext";
 
 const ProtectedRoute = () => {
   const { isAuthenticated } = useContext(AuthContext);
-  if (isAuthenticated !== "true") {
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  console.log("isAuthenticated", isAuthenticated);
+  if (isLoggedIn !== "true") {
     return <Navigate to="/login" />;
   }
 

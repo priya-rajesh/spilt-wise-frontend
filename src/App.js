@@ -40,23 +40,24 @@ function App() {
           <Routes>
             <Route path="/" exact element={<Navigate to={"/expenses"} />} />
             <Route path="/login" element={<Login />} />
-            <Route element={<ProtectedRoute />} />
-            <Route
-              path="/expenses"
-              element={
-                <Layout>
-                  <Expenses />
-                </Layout>
-              }
-            />
-            <Route
-              path="/dashboard"
-              element={
-                <Layout>
-                  <Dashboard />
-                </Layout>
-              }
-            />
+            <Route element={<ProtectedRoute />}>
+              <Route
+                path="/expenses"
+                element={
+                  <Layout>
+                    <Expenses />
+                  </Layout>
+                }
+              />
+              <Route
+                path="/dashboard"
+                element={
+                  <Layout>
+                    <Dashboard />
+                  </Layout>
+                }
+              />
+            </Route>
           </Routes>
         </BrowserRouter>
       </ThemeProvider>

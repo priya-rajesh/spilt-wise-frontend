@@ -5,10 +5,16 @@ import Link from "@mui/material/Link";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../../AuthContext";
 
 export default function Login() {
   const navigate = useNavigate();
+  const { isAuthenticated } = React.useContext(AuthContext);
+
+  if (isAuthenticated === "true") {
+    return <Navigate to="/expenses" />;
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
