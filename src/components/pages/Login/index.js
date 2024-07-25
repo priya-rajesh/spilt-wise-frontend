@@ -54,9 +54,7 @@ export default function Login() {
         >
           Hi Welcome Back
         </Typography>
-        <Typography component="p" variant="p">
-          More effectively with optimized workflows.
-        </Typography>
+
         <Box
           component="img"
           sx={{

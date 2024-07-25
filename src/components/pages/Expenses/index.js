@@ -14,7 +14,8 @@ import {
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Button } from "@mui/material";
-import AddIcon from "@mui/icons-material/Add";
+import Model from "../Model"; // Adjust relative to your file's location
+
 const rows = [
   {
     name: "Home Loan",
@@ -66,13 +67,8 @@ const MyTable = () => {
 
   const PlusButton = () => {
     return (
-      <Button
-        variant="contained"
-        color="primary"
-        startIcon={<AddIcon />}
-        size="small"
-      >
-        Add
+      <Button color="primary">
+        <Model />
       </Button>
     );
   };
