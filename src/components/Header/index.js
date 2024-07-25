@@ -1,6 +1,7 @@
 import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
+import { Tooltip } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import AccountCircle from "@mui/icons-material/AccountCircle";
@@ -27,15 +28,17 @@ const Header = (props) => {
           Expenses Tracker
         </Typography>
         <Box>
-          <IconButton
-            size="large"
-            edge="end"
-            color="inherit"
-            aria-label="account of current user"
-            aria-haspopup="true"
-          >
-            <AccountCircle />
-          </IconButton>
+          <Tooltip title="Hi Welcome">
+            <IconButton
+              size="large"
+              edge="end"
+              color="inherit"
+              aria-label="account of current user"
+              aria-haspopup="true"
+            >
+              <AccountCircle />
+            </IconButton>
+          </Tooltip>
         </Box>
       </Toolbar>
     </AppBar>

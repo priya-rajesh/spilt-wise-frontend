@@ -6,7 +6,7 @@ import List from "@mui/material/List";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import HomeIcon from "@mui/icons-material/Home";
-import InfoIcon from "@mui/icons-material/Info";
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 
 import "./index.css";
 import { NavLink } from "react-router-dom";
@@ -16,7 +16,7 @@ const Sidebar = ({ open }) => {
   return (
     <Box
       sx={{
-        width: open ? 200 : 0,
+        width: open ? 200 : 64,
         flexShrink: 0,
         overflowX: "hidden",
 
@@ -46,9 +46,9 @@ const Sidebar = ({ open }) => {
           activeclassname="active"
         >
           <ListItemIcon>
-            <InfoIcon />
+            <AttachMoneyIcon />
           </ListItemIcon>
-          <ListItemText primary="Expenceses" />
+          <ListItemText primary="Expenses" />
         </ListItemButton>
       </List>
     </Box>
