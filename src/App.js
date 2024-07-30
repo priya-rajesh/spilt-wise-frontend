@@ -8,6 +8,7 @@ import { AuthProvider } from "./AuthContext";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Layout from "./components/Layout";
+
 import Dashboard from "./components/pages/Dashboard";
 
 const defaultTheme = createTheme({

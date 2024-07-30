@@ -25,7 +25,7 @@ const Sidebar = ({ open }) => {
         bgcolor: "background.paper",
         backgroundColor: "#b22acf",
         color: "#ffffff",
-        marginTop: "64px",
+        marginTop: "60px",
       }}
       className="sidebar"
     >

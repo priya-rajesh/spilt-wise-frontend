@@ -3,7 +3,7 @@
 }
 
 .sidebar .active {
-  background-color: rgba(73, 75, 77, 0.82);
+  background-color: rgb(53, 22, 87);
   border-right: 5px solid coral;
   color: #fff;
 }
